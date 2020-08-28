@@ -87,4 +87,8 @@ int main(){
     sub();
     length();
     norm();
+
+    Vec v1(0,0);
+    v1 = Vec(1,1);
+    std::cout << v1.Print();
 }

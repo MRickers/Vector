@@ -13,7 +13,10 @@ std::string vector::Vector2D::Print() const{
 }
 
 vector::Vector2D vector::Vector2D::operator=(const Vector2D& other) {
-	return Vector2D(other.m_x, other.m_y);
+    m_x = other.m_x;
+    m_y = other.m_y;
+
+    return *this;
 }
 
 vector::Vector2D vector::Vector2D::operator+(const Vector2D& other) {
@@ -84,6 +87,11 @@ void vector::Vector2D::SetX(float x){
 
 void vector::Vector2D::SetY(float y){
     m_y = y;
+}
+
+void vector::Vector2D::Set(const Vector2D& vec){
+    m_x = vec.m_x;
+    m_y = vec.m_y;
 }
 
 float vector::Vector2D::Length(){

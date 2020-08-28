@@ -20,6 +20,7 @@ namespace vector {
         float GetY() const;
         void SetX(float x);
         void SetY(float y);
+        void Set(const Vector2D& vec);
 
         std::string Print() const;
 
