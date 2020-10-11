@@ -16,7 +16,7 @@ vector::Vector2D vector::Vector2D::operator=(const Vector2D& other) {
     m_x = other.m_x;
     m_y = other.m_y;
 
-    return *this;
+    return Vector2D(m_x,m_y);
 }
 
 vector::Vector2D vector::Vector2D::operator+(const Vector2D& other) {
@@ -27,7 +27,7 @@ vector::Vector2D vector::Vector2D::operator+=(const Vector2D& other){
     m_x += other.m_x;
     m_y += other.m_y;
 
-    return *this;
+    return Vector2D(m_x,m_y);
 }
 
 vector::Vector2D vector::Vector2D::operator-(const Vector2D& other) {
@@ -38,7 +38,7 @@ vector::Vector2D vector::Vector2D::operator-=(const Vector2D& other){
     m_x -= other.m_x;
     m_y -= other.m_y;
 
-    return *this;
+    return Vector2D(m_x,m_y);
 }
 
 vector::Vector2D vector::Vector2D::operator*(float scalar) {

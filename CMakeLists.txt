@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(vector CXX)
+project(Vector CXX)
 
 if(WIN32)
 set(COMPILE_OPTIONS)
