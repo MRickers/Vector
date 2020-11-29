@@ -8,6 +8,11 @@ vector::Vector2D::Vector2D(float x, float y) :
 
 }
 
+vector::Vector2D::Vector2D(const Vector2D& other){
+    m_x = other.m_x;
+    m_y = other.m_y;
+}
+
 std::string vector::Vector2D::Print() const{
     return std::string("x: "+std::to_string(m_x)+" y: "+std::to_string(m_y));
 }
