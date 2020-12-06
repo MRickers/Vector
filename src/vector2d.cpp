@@ -4,7 +4,7 @@
 
 vector::Vector2D::Vector2D(float x, float y) :
 	m_x(x),
-	m_y(y) {
+	m_y(y){
 
 }
 
@@ -99,8 +99,16 @@ void vector::Vector2D::Set(const Vector2D& vec){
     m_y = vec.m_y;
 }
 
-float vector::Vector2D::Length(){
+float vector::Vector2D::Magnitude() const{
     return sqrt(m_x*m_x + m_y * m_y);
+}
+
+void vector::Vector2D::Magnitude(float mag) {
+    float tmp_x = m_x * mag / Magnitude();
+    float tmp_y = m_y * mag / Magnitude();
+
+    m_x = tmp_x;
+    m_y = tmp_y;
 }
 
 /**
@@ -108,6 +116,12 @@ float vector::Vector2D::Length(){
  * 
  */
 void vector::Vector2D::Normalize(){
-    float length = Length();
+    float length = Magnitude();
     *this /= length;
+}
+
+void vector::Vector2D::SetLimit(float limit) {
+    if(Magnitude() > limit){
+        Magnitude(limit);
+    }
 }

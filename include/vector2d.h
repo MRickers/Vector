@@ -28,8 +28,11 @@ namespace vector {
 
         std::string Print() const;
 
-        float Length();
+        float Magnitude() const;
+        void Magnitude(float mag);
         void Normalize();
+
+        void SetLimit(float limit);
 
     private:
         float m_x;

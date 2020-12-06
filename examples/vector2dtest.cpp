@@ -68,7 +68,7 @@ void length(){
     std::cout << "Length Test" << std::endl;
     Vec v(3,4);
     std::cout << v.Print() << std::endl;
-    std::cout << "Length\nexpected 5\nactual " << v.Length() << std::endl;
+    std::cout << "Length\nexpected 5\nactual " << v.Magnitude() << std::endl;
 
 }
 
@@ -80,6 +80,14 @@ void norm(){
     std::cout << "Norm\nexpected x:0.6 y:0.8\nactual " << v.Print() << std::endl;
 }
 
+void mag() {
+    Vec v(2,2);
+    v.Magnitude(10);
+    std::cout << "Mag: " << v.Magnitude() << std::endl;
+    std::cout << "Mag: " << v.Print() << std::endl;
+    std::cout << "New Mag: " << v.Magnitude() << std::endl;
+}
+
 int main(){
     add();
     mult();
@@ -87,6 +95,7 @@ int main(){
     sub();
     length();
     norm();
+    mag();
 
     Vec v1(0,0);
     v1 = Vec(1,1);
