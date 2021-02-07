@@ -39,3 +39,5 @@ namespace vector {
         float m_y;
     };
 }
+
+using Vector = vector::Vector2D;
