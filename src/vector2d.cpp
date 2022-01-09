@@ -48,7 +48,7 @@ vector::Vector2D vector::Vector2D::operator-=(const Vector2D& other){
     return Vector2D(m_x,m_y);
 }
 
-vector::Vector2D vector::Vector2D::operator*(float scalar) {
+vector::Vector2D vector::Vector2D::operator*(float scalar) const {
 	return Vector2D(m_x * scalar, m_y * scalar);
 }
 
@@ -59,7 +59,7 @@ vector::Vector2D& vector::Vector2D::operator*=(float scalar) {
     return *this;
 }
 
-vector::Vector2D vector::Vector2D::operator/(float scalar) {
+vector::Vector2D vector::Vector2D::operator/(float scalar) const {
     if(scalar == 0){
         throw std::runtime_error("divided by zero error");
     }
