@@ -41,4 +41,4 @@ namespace vector {
     };
 }
 
-using Vector = vector::Vector2D;
+using Vector2D = vector::Vector2D;
